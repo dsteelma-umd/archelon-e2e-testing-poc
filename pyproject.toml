@@ -1,0 +1,43 @@
+[project]
+name = "fcrepo-e2e-tests"
+version = "1.0.0"
+dependencies = [
+]
+
+[project.optional-dependencies]
+prod = [
+]
+test = [
+    "behave==1.2.6",
+    "playwright==1.43.0",
+    "pytest==8.2.0",
+    "pytest-playwright==0.5.0",
+    "ruff~=0.3",
+]
+
+[project.scripts]
+
+[tool.setuptools]
+py-modules = []
+
+[tool.pytest.ini_options]
+
+[tool.coverage.run]
+
+[tool.ruff]
+line-length = 120
+exclude = [
+  # Ignore auto-generated "migrations" directories
+  "migrations"
+]
+
+[tool.ruff.format]
+quote-style = "single"
+
+[tool.ruff.lint]
+# preview is required to enable many pycodestyle rules see
+# https://docs.astral.sh/ruff/rules/
+preview = true
+
+# Enable pycodestyle errors and warnings
+select = ["E", "W"]
